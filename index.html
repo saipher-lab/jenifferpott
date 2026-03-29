@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Jeniffer Pott - Projects</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
@@ -41,8 +40,8 @@
 
     h1 {
       font-size: 3rem;
-      color: #8A2BE2FF;
-      text-shadow: 0 0 20px #8A2BE2FF;
+      color: #8A2BE2FF; /* COR ROXA */
+      text-shadow: 0 0 20px #8A2BE2FF; /* BRILHO ROXO */
     }
 
     p {
@@ -51,20 +50,28 @@
       margin-top: 10px;
     }
 
-    a {
+    /* Botão de voltar com pulsação roxa */
+    .back-btn {
       margin-top: 20px;
       padding: 10px 20px;
-      background: #8A2BE2FF;
+      background: #8A2BE2FF; /* COR DE FUNDO ROXA */
       color: white;
       text-decoration: none;
       font-size: 1rem;
       border-radius: 5px;
-      text-shadow: 0 0 5px #8A2BE2FF;
+      text-shadow: 0 0 5px #8A2BE2FF; /* BRILHO */
+      animation: pulse 2s infinite;  /* PULSANTE */
       transition: 0.3s;
     }
 
-    a:hover {
-      text-shadow: 0 0 25px #8A2BE2FF;
+    .back-btn:hover {
+      text-shadow: 0 0 25px #8A2BE2FF; /* BRILHO MAIOR AO PASSAR O MOUSE */
+    }
+
+    @keyframes pulse {
+      0% { text-shadow: 0 0 5px #8A2BE2FF; box-shadow: 0 0 5px #8A2BE2FF; }
+      50% { text-shadow: 0 0 15px #8A2BE2FF; box-shadow: 0 0 15px #8A2BE2FF; }
+      100% { text-shadow: 0 0 5px #8A2BE2FF; box-shadow: 0 0 5px #8A2BE2FF; }
     }
   </style>
 </head>
@@ -75,10 +82,9 @@
 <div class="content">
   <h1>Jeniffer Pott</h1>
   <p>Projects are coming soon!</p>
-  <a href="https://saipher-lab.github.io/">Return to main screen</a>
+  <a href="https://saipher-lab.github.io/" class="back-btn">Return to main screen</a>
 </div>
 
-<!-- Partículas -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 <script>
 particlesJS("particles-js", {
